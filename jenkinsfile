@@ -3,21 +3,15 @@ agent any
     stages {
      stage ('git clone'){
        steps  {
-          sh 'git url'
+          sh 'https://github.com/Karthick-sketch769/guvi-final-project.git'
            }
            }
-    stage ('build & execute') {
-      steps {
-        sh 'chmod +x build.sh'
-           }
+    stage ('build') {
       steps {
         sh './build.sh'
            }
            }
-     stage ('deploy & execute') {
-      steps {
-        sh 'chmod +x deploy.sh'
-           }
+     stage ('deploy') {
      steps {
         sh './deploy.sh'
         }
