@@ -1,8 +1,8 @@
 version: '3'
 services:
-  react.app:
-    image: karthick997/dev:react.app
+  cappro:
+    image: "karthick997/dev:cappro"
+    container_name: "react"
     ports:
       - "80:80"
-    container_name: e-.app
 
