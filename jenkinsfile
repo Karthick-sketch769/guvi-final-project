@@ -1,0 +1,26 @@
+pipeline {
+agent any 
+    stages {
+     stage ('git clone'){
+       steps  {
+          sh 'git url'
+           }
+           }
+    stage ('build & execute') {
+      steps {
+        sh 'chmod +x build.sh'
+           }
+      steps {
+        sh './build.sh'
+           }
+           }
+     stage ('deploy & execute') {
+      steps {
+        sh 'chmod +x deploy.sh'
+           }
+     steps {
+        sh './deploy.sh'
+        }
+        }
+        }
+        }
