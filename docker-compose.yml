@@ -1,0 +1,8 @@
+version: '3'
+services:
+  cappro:
+    image: "karthick997/prod:cappro"
+    container_name: "react"
+    ports:
+      - "80:80"
+
