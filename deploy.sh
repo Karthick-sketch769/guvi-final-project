@@ -1,4 +1,5 @@
 #!/bin/bash
+sh 'chmod +x build.sh'
 if [ $GIT_BRANCH = = "origin/dev" ]; then
         docker tag cappro karthick997/dev
         docker push karthick997/dev:cappro
