@@ -1,20 +1,21 @@
 pipeline {
 agent any 
     stages {
-     stage ('git clone'){
-       steps  {
-          sh 'https://github.com/Karthick-sketch769/guvi-final-project.git'
-           }
-           }
     stage ('build') {
+      steps {
+        sh 'chmod +x build.sh'
+           }           
       steps {
         sh './build.sh'
            }
            }
      stage ('deploy') {
+      steps {
+       sh 'chmod +x deploy.sh'
+          }
      steps {
         sh './deploy.sh'
         }
         }
         }
-        }
+        
